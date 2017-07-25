@@ -10,6 +10,6 @@ Modifies the default KernelSpecManager to:
 Use it:
 
     pip install pex
-    pex notebook pexnb -m pexnb -o ./nb.pex
+    pex pexnb -m pexnb -o ./nb.pex
 
     ./nb.pex
