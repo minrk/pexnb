@@ -1,6 +1,6 @@
 # pexnb
 
-Entrypoint for launching notebooks with PEX
+Entrypoint for launching jupyter notebooks from a pex
 
 Modifies the default KernelSpecManager to:
 
@@ -12,8 +12,4 @@ Use it:
     pip install pex
     pex notebook pexnb -m pexnb -o ./nb.pex
 
-    $PWD/nb.pex
-
-Notes:
-
-- Resulting .pex **must** be invoked by absolute path, otherwise the .pex file cannot be found.
+    ./nb.pex
