@@ -1,0 +1,11 @@
+language: python
+python:
+  - 3.6
+install:
+  - pip install --upgrade setuptools pip
+  - pip install pex codecov
+  - pex -r test-requirements.txt -m pytest -o ./test.pex
+script:
+  - ./test.pex --cov pexnb tests
+after_success:
+  - codecov

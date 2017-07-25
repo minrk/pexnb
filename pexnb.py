@@ -29,8 +29,13 @@ class PEXKernelSpecManager(KernelSpecManager):
             spec.env['PEX_MODULE'] = 'ipykernel_launcher'
         return spec
 
-
-if __name__ == '__main__':
+def main(argv=None):
+    """Launch the notebook with PEXKernelSpecManager"""
+    if argv is None:
+        argv = sys.argv
     from notebook.notebookapp import NotebookApp
     app = NotebookApp.instance(kernel_spec_manager_class=PEXKernelSpecManager)
-    app.launch_instance()
+    app.launch_instance(argv)
+
+if __name__ == '__main__':
+    main()
